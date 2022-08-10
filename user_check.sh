@@ -1,3 +1,9 @@
+# Runs once every hour.
+# Takes the output of the contents of /etc/passwd and converts it to an MD5 hash.
+# Stores the current MD5 hash into the /var/log/current_users file.
+# On subsequent runs, if the MD5 sum changes, it logs the change in the /var/log/user_changes log file with the message, DATE TIME changes occurred,
+# ...replacing DATE and TIME with appropriate values. It also replaces the old MD5 hash in /var/log/current_users file with the new MD5 hash.
+
 #!/bin/bash
 
 ROOT_UID=0     # Only users with $UID 0 have root privileges.
