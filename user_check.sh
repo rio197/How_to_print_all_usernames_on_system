@@ -1,4 +1,4 @@
-# Runs once every hour.
+# Runs once every hour (see the crontab entry elsewhere in this repo).
 # Takes the output of the contents of /etc/passwd and converts it to an MD5 hash.
 # Stores the current MD5 hash into the /var/log/current_users file.
 # On subsequent runs, if the MD5 sum changes, it logs the change in the /var/log/user_changes log file with the message, DATE TIME changes occurred,
